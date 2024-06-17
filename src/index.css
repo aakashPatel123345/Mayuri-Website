@@ -58,3 +58,46 @@
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
 }
+
+/* Board Section CSS */
+.board_images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.board_card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Image for the board member */
+.board_image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Container for board member info */
+.board_member_info {
+  padding: 10px;
+}
+
+/* Name of the board member */
+.board_member_name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+}
+
+/* Position of the board member */
+.board_member_position {
+  font-size: 0.9em;
+  color: #555;
+}

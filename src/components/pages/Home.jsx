@@ -25,6 +25,29 @@ const Home = () => {
     { name: "Arya Ghorpade", position: "Hospitality", image: "" },
     { name: "TBA", position: "Hospitality", image: "" },
 
+    { name: "Sashu Prakash", position: "Technology", image: "" },
+    { name: "Mahathi Chintapalli", position: "Technology", image: "" },
+    { name: "Ishaan Bhardvaj", position: "Technology", image: "" },
+
+    { name: "Srinidhi Gubba", position: "Judging", image: "" },
+    { name: "TBA", position: "Judging", image: "" },
+
+    { name: "Akash Marakath", position: "Sponsorship", image: "" },
+    { name: "Sanjana Shankar", position: "Sponsorship", image: "" },
+    { name: "Aditya Patel", position: "Sponsorship", image: "" },
+    { name: "Dhruvi Kadhiwala", position: "Sponsorship", image: "" }, 
+
+    { name: "Rushina Patel", position: "Public Relations", image: "" }, 
+    { name: "TBA", position: "Public Relations", image: "" }, 
+    { name: "TBA", position: "Public Relations", image: "" }, 
+
+    { name: "Jayna Patel", position: "Liaison Head", image: "" }, 
+    { name: "Riyanna Desai", position: "Liaison Head", image: "" }, 
+
+    { name: "Jiya Amin", position: "Social Chair", image: "" }, 
+
+    { name: "Aditi Gubba", position: "Mixer", image: "" }, 
+    { name: "Surya UdayShankar", position: "Mixer", image: "" }
   ];
 
   
@@ -55,22 +78,15 @@ const Home = () => {
       </div>
 
       <div className="board_images">
-        <div className="board_image">
-          <img src="https://via.placeholder.com/150" alt="Board Member" />
-          <p>Board Member 1</p>
-        </div>
-        <div className="board_image">
-          <img src="https://via.placeholder.com/150" alt="Board Member" />
-          <p>Board Member 2</p>
-        </div>
-        <div className="board_image">
-          <img src="https://via.placeholder.com/150" alt="Board Member" />
-          <p>Board Member 3</p>
-        </div>
-        <div className="board_image">
-          <img src="https://via.placeholder.com/150" alt="Board Member" />
-          <p>Board Member 4</p>
-        </div>
+          {boardMembers.map((member, index) => (
+            <div className="board_card" key={index}>
+              <img src={member.image} alt={member.name} className="board_image"/>
+              <div className="board_member_info">
+                <p className="board_member_name">{member.name}</p>
+                <p className="board_member_position">{member.position}</p>
+              </div>
+            </div>
+          ))}
       </div>
     </div>
 
