@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 import logo_light from '../../assets/logo-black.png'
 import logo_dark  from '../../assets/logo-white.png'
 import search_icon_light from '../../assets/search-w.png'
@@ -18,26 +19,35 @@ const navbar = ({theme, setTheme}) => {
 
     
   return (
-    <div className='navbar'>
-        <img src={theme == 'light' ? logo_light : logo_dark} alt="" className='logo'/>
+    <nav className='navbar'>
+
+        <Link to ='/'>
+            <img src={theme == 'light' ? logo_light : logo_dark} alt="" className='logo'/>
+        </Link>
 
         <ul>
-            <li>Home</li>
-            <li>Philantrophy</li>
-            <li>Media</li>
-            <li>Sponsors</li>
-            <li>Contact Us</li>
+            <li>
+                <Link to='/'>Home</Link>
+            </li>
+            <li>
+                <Link to='/philantrophy'>Philantrophy</Link>
+            </li>
+            <li>
+                <Link to='/media'>Media</Link>
+            </li>
+            <li>
+                <Link to='/sponsors'>Sponsors</Link>
+            </li>
+            <li>
+                <Link to='/contact'>Contact</Link>
+            </li>
         </ul>
 
-    <div className='search_box'>
-        <input type='text' placeholder='Search'/>
-        <img src={theme == 'light' ? search_icon_light : search_icon_dark} alt="" />
-    </div>
 
     <img onClick={()=>toggle_mode()} 
     src={theme == 'light' ? toggle_icon_light : toggle_icon_dark} alt="" className='toggle_icon'/>
 
-    </div>
+    </nav>
   )
 }
 

@@ -1,0 +1,9 @@
+.footer{
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 10px;
+    /* position: fixed; Remove this line */
+    position: relative; /* Add this line if necessary */
+    bottom: 0;
+}
