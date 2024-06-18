@@ -18,11 +18,11 @@
   background: #222;
 }
 
-.homepage_heading {
+.homepage-heading {
   font-size: 100px;
 }
 
-.content_container {
+.content-container {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -35,11 +35,15 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: rgb(5, 22, 80, 0.95)
+  background-color: rgb(5, 22, 80, 0.90)
 }
 
-.homepage-heading {
+.heading-container {
   text-align: center;
+}
+
+.scroll-down-image {
+  width: 20%;
 }
 
 
@@ -62,7 +66,7 @@
 /* Board Section CSS */
 .board_images {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
   gap: 20px;
 }
 
