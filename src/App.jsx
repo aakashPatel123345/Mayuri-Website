@@ -7,27 +7,24 @@ import './index.css'
 import Home from './components/pages/Home'
 import Media from './components/pages/Media'
 import Philantrophy from './components/pages/Philantrophy'
-import Sponsors from './components/pages/Sponsors'
+import Sponsorship from './components/pages/Sponsorship'
 import Contact from './components/pages/Contact'
 
 const App = () => {
 
-
-  const [theme, setTheme] = useState('light')
-
   return (
-    <div className={`container ${theme}`}>
-      <Navbar theme={theme} setTheme={setTheme}/>
-      <div className="content_container">
+    <div className='container'>
+        <div className="content_container">
+      <Navbar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/media" element={<Media />} />
           <Route path="/philantrophy" element={<Philantrophy />} />
-          <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/sponsorship" element={<Sponsorship />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
-      <Footer theme={theme} setTheme={setTheme}/>
+        </div>
+      <Footer/>
     </div>
   )
 }

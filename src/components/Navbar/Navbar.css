@@ -3,10 +3,11 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background-color: rgb(2, 2, 20, 0.90);
     padding: 15px 7%;
-    transition: 0.5s;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .logo {
@@ -27,50 +28,3 @@ ul li {
     cursor: pointer;
 }
 
-.toggle_icon {
-    width: 50px;
-    cursor: pointer;
-    margin-left: 40px;
-}
-
-.search_box {
-    display: flex;
-    align-items: center;
-    background: #242424;
-    padding: 10px 20px;
-    border-radius: 50px;
-}
-
-.search_box input {
-    padding: 6px;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    color: white;
-    font-size: 18px;
-    max-width: 200px;
-}
-
-.search_box input::placeholder {
-    color: white;
-}
-
-.search_box img {
-    width: 20px;
-}
-
-.dark .navbar {
-    background: black;
-    color: white;
-}
-.dark .search_box {
-    background: #fff;
-}
-
-.dark .search_box input {
-    color: black;
-}
-
-.dark .search_box input::placeholder {
-    color: black;
-}

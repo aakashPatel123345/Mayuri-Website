@@ -2,20 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  background-color: rgb(2, 2, 20, 0.90);
 }
 
 .container {
   width: 100vs;
   min-height: 100vh;
-  background: #f9f9f9;
+  background-color: rgb(2, 2, 20, 0.90);
   transition: 0.5s;
   display: flex;
   flex-direction: column;
-}
-
-.container.dark {
-  background: #222;
 }
 
 .homepage-heading {
@@ -24,84 +21,4 @@
 
 .content-container {
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-}
-
-/* HOME CSS */
-.home-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(5, 22, 80, 0.90)
-}
-
-.heading-container {
-  text-align: center;
-}
-
-.scroll-down-image {
-  width: 20%;
-}
-
-
-.bottom-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.bottom-section-content {
-  flex: 1;
-}
-
-.home-page-image {
-  max-width: 50%; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover;
-}
-
-/* Board Section CSS */
-.board_images {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Fixed 5 columns */
-  gap: 20px;
-}
-
-.board_card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-
-/* Image for the board member */
-.board_image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-}
-
-/* Container for board member info */
-.board_member_info {
-  padding: 10px;
-}
-
-/* Name of the board member */
-.board_member_name {
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-/* Position of the board member */
-.board_member_position {
-  font-size: 0.9em;
-  color: #555;
 }

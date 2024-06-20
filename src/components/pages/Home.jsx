@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../index.css'
+import '../../Home.css'
 import home_page_image from '../../assets/home-page-image.jpg'
 import aakash_p from '../../assets/board_member_pictures/aakash_p.jpg'
 import aditi_g from '../../assets/board_member_pictures/aditi_g.jpg'
@@ -38,9 +39,9 @@ const Home = () => {
   }
 
   const boardMembers = [
-    { name: "Aakash Patel", position: "Director", image: aakash_p },
-    { name: "Pratiksha Das", position: "Director", image: pratiksha_d },
-    { name: "Sanjana Chimaladinne", position: "Director", image: sanjana_c },
+    { name: "Aakash Patel", position: "Directors", image: aakash_p },
+    { name: "Pratiksha Das", position: "Directors", image: pratiksha_d },
+    { name: "Sanjana Chimaladinne", position: "Directors", image: sanjana_c },
 
     { name: "Teja Nallagorla", position: "Event Ops", image: teja_n },
     { name: "Shreya Gavarapattu", position: "Event Ops", image: shreya_g },
@@ -79,9 +80,21 @@ const Home = () => {
     { name: "Surya UdayShankar", position: "Mixer", image: surya_u }
   ];
 
+  const groupByPosition = (members) => {
+    return members.reduce((acc, member) => {
+      if (!acc[member.position]) {
+        acc[member.position] = [];
+      }
+      acc[member.position].push(member);
+      return acc;
+    }, {});
+  };
+
+  const groupedMembers = groupByPosition(boardMembers);
+
   
   return (
-    <div>
+    <div className='homepage-main-container'>
       <div className='home-container'>
           <div className='heading-container'>
             <h1 className='homepage-heading'>Maryland Mayuri</h1>
@@ -96,7 +109,8 @@ const Home = () => {
         <div className="bottom-section-content">
           <h1 className="bottom-section-heading">Who Are We</h1>
           <p className="bottom-section-text">
-            Maryland Mayuri is a non-profit organization that aims to promote Indian culture through dance, music, and art. We host events, workshops, and classes to educate and entertain the community. Our goal is to provide a platform for artists to showcase their talent and for the community to come together and celebrate Indian culture.
+          Founded in 2013, Maryland Mayuri is Maryland's one and only intercollegiate classical Indian dance competition. 
+          We are a registered 501(c)(3) organization that promotes blah blah.
           </p>
         </div>
 
@@ -104,6 +118,9 @@ const Home = () => {
       </div>
 
       <div className="classical-section">
+        <div className="classical-section-left-placeholder">
+          
+        </div>
         <div className="classical-section-content">
           <h1 className="classical-section-heading">Classical Dance</h1>
           <p className="classical-section-text">
@@ -114,24 +131,32 @@ const Home = () => {
           </p>
         </div>
       </div>
+  <div className="board-section">
+    {Object.entries(groupedMembers).map(([position, members], index) => (
+      <React.Fragment key={position}>
+        {index > 0 && <div className="separator">
+          {/* Render your separator element here */}
+        </div>}
 
-    <div className="board_section">
-      <div className="board_section_heading">
-        <h1>Meet Our Board!</h1>
-      </div>
-
-      <div className="board_images">
-          {boardMembers.map((member, index) => (
-            <div className="board_card" key={index}>
-              <img src={member.image} alt={member.name} className="board_image"/>
-              <div className="board_member_info">
-                <p className="board_member_name">{member.name}</p>
-                <p className="board_member_position">{member.position}</p>
+        <div className="position-section">
+          <h3 className="position-name">{position}</h3>
+          <div className="member-cards">
+            {members.map((member) => (
+              <div className="member-card">
+                {/* Render the member's card content here */}
+                <img src={member.image} alt={member.name} />
+                <div className="member-card-content">
+                  <h4>{member.name}</h4>
+                {/* Add any other member information you want to display */}
+                </div>
               </div>
-            </div>
-          ))}
-      </div>
-    </div>
+            ))}
+          </div>
+        </div>
+      </React.Fragment>
+    ))}
+  </div>
+
 
     </div>
 

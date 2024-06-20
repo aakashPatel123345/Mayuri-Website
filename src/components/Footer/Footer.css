@@ -1,9 +1,12 @@
-.footer{
-    width: 100%;
-    background: #fff;
-    text-align: center;
-    padding: 10px;
-    /* position: fixed; Remove this line */
-    position: relative; /* Add this line if necessary */
+.main-footer {
+    color: white;
+    background-color: rgb(2, 2, 20, 0.90);
+    padding-top: 3em;
+    position: relative;
     bottom: 0;
+    width: 100%;
+}
+
+.main-footer {
+    margin-top: 20px;
 }
