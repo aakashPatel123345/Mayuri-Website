@@ -22,17 +22,14 @@ const Footer = () => {
                 <a href="https://www.facebook.com/UMDMayuri/" target="_blank" rel="noopener noreferrer">
                     <img src={facebookIcon} alt="Facebook" />
                 </a>
-
                 {/* Instagram */}
                 <a href="https://www.instagram.com/marylandmayuri/" target="_blank" rel="noopener noreferrer">
                     <img src={instagramIcon} alt="Instagram" />
                 </a>
-
                 {/* TikTok */}
                 <a href="https://www.tiktok.com/@marylandmayuri" target="_blank" rel="noopener noreferrer">
                     <img src={tiktokIcon} alt="TikTok" />
                 </a>
-
                 {/* Email */}
                 <a href="mailto:umdmayuri@gmail.com" target="_blank" rel="noopener noreferrer">
                     <img src={emailIcon} alt="Email" />

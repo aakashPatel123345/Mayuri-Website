@@ -8,6 +8,8 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000; /* Ensure navbar is always on top */
+    height: 80px; /* Set a fixed height for the navbar */
 }
 
 .logo {

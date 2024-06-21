@@ -14,9 +14,30 @@
     text-align: center;
 }
 
+.homepage-heading {
+    background-image: linear-gradient(90deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimation 3s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 200% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 .scroll-down-image {
     width: 20%;
 }
+
+
 
 
 .bottom-section {

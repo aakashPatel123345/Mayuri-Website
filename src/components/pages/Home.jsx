@@ -29,7 +29,7 @@ import jiya_a from '../../assets/board_member_pictures/person_placeholder.jpg'
 import aditya_p from '../../assets/board_member_pictures/person_placeholder.jpg'
 
 import tba from '../../assets/board_member_pictures/person_placeholder.jpg'
-import peacock_image from '../../assets/peacock_icon.png'
+import peacock_image from '../../assets/peacock-icon.png'
 
 
 const Home = () => {
